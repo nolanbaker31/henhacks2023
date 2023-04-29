@@ -1,0 +1,17 @@
+Section 2: File Management
+Interacting with files is one of the main applications of the Linux CLI.
+Don't forget to read the man pages for more command options!
+
+Some common commands are:
+	touch <filename>     -- update time metadate of a file, or create a file if none exists
+	mv <src> <dst>       -- move file <src> to <dst>, can be different directory or just renaming
+	cp <src> <dst>       -- copy file from <src> to <dst>, use -R to recursively copy all files in the directory
+	rm <file>            -- remove/delete a file listing, use -R to recursively delete subfolder and files or -f to force
+	(CAUTION- the rm command can cause loss of important data, only use with safe user priveledges)
+	mkdir <dir>          -- creates a new directory <dir> in current directory
+	rmdir <dir>          -- remove/delete directory <dir>
+
+Some commands to interract/read file data:
+	cat <file1...>       -- prints contents of file to CLI, can concatenate multiple files. See next section for more usage with this command
+	tac <file1...>       -- similar to cat, but prints file in reverse
+	find <src>
