@@ -1,0 +1,17 @@
+
+-INTRO to CLI
+-man and apropos
+
+Section 1: Navigation
+- ls, -a,
+- cd, ..,
+- pwd
+
+
+Section 2: File management
+- touch
+- mkdir
+- vim/emacs/nano/pico
+- rm, -r, -f
+
+Section 3:
