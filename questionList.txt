@@ -1,17 +1,77 @@
 
--INTRO to CLI
--man and apropos
+-INTRO to CLI, command format, flags(options), parameter
+-man and apropos, sudo -k -g -h, history and clear
+-Ctrl + C: terminate running cmd
+- crtl+Z: send SIGSTP to current forground app
+- fg : bring paused app to foreground
+- Ctrl+S: freeze
+- Ctrl+Q: unfreeze
+- Ctrl+A: beginning of line
+- Ctrl+E: end of line
+- ; : seperate cmd
+- && : run if previous command successful
 
 Section 1: Navigation
-- ls, -a,
-- cd, ..,
-- pwd
+- ls, -a, -R, lh
+- cd, .., ~[username], -
+- pwd, -L, -P
+- alias & unalias
 
 
 Section 2: File management
 - touch
-- mkdir
+- mv, cp, -R
+- mkdir (-p, -m) , rmdir
 - vim/emacs/nano/pico
 - rm, -r, -f
+- cat, tac
+- locate (-i) / updatedb
+- find
+- diff
+- tar, zip, unzip
 
-Section 3:
+Section 3: Piping & Stream
+- echo (-n , -e, -E)
+- input | function
+- input > output.txt
+- input >> output.txt
+- grep (-i, -c, -l, -w, -r)
+- head -n, -c, -q
+- sed (maybe?)
+- awk (maybe not include?)
+
+Section 4: permissions & users
+- explain file permissions in unix (-rwxrwxrwx = 777)
+- chmod (-c, -f, -v)
+- chown
+- useradd, userdel (/etc/passwd, /etc/shadow, /etc/group, /etc/gshadow)
+- passwd
+- su
+-
+
+Section 5: System & Processes
+- ps (-T, -u, -A), ps ux
+- top, htop (-d, -C, -h)
+- kill (SIGTERM, SIGKILL)
+- uname (-a, -s, -n)
+
+
+Section 6: Networking
+- ping (-c)
+- wget, curl
+- hostname (-a, -A, -i)
+- ssh, scp
+- ifconfig
+- traceroute
+- netstat
+- nslookup
+- whois
+
+Section 7: Git basic
+- brief explanation
+- git clone
+- git init
+- git add
+- git commit
+- git push
+- git pull

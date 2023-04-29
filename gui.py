@@ -2,6 +2,7 @@ import tkinter as tk
 import tkinter.messagebox
 import customtkinter as ct
 from PIL import Image    #Pillow
+import questions.buttons as qb 
 
 
 #System settings
@@ -10,9 +11,11 @@ ct.set_default_color_theme("dark-blue")  # Themes: "blue" (standard), "green", "
 
 class Home(ct.CTk):
 
-    def __init__(self,count):
+    def __init__(self,count,question,explain):
         super().__init__()
         self.count = 0
+        self.question = 0
+        self.explain = 0
 
         #Making the GUI
 
@@ -24,13 +27,11 @@ class Home(ct.CTk):
         self.grid_columnconfigure(1, weight=1)
         self.grid_columnconfigure((2, 3), weight=0)
         self.grid_rowconfigure((0, 1, 2,3), weight=1)
-
-        #self.build_text()
          
         #Side Bar for options
         self.sidebar_frame = ct.CTkFrame(self, width=250, corner_radius=0)
         self.sidebar_frame.grid(row=0, column=0, rowspan=4, sticky="nsew")
-        self.sidebar_frame.grid_rowconfigure(4, weight=1) 
+        self.sidebar_frame.grid_rowconfigure(5, weight=1) 
 
         self.logo_label = ct.CTkLabel(self.sidebar_frame, text="Tabs", font=ct.CTkFont(size=20, weight="bold"))
         self.logo_label.grid(row=0, column=0, padx=20, pady=(20, 10))
@@ -44,33 +45,56 @@ class Home(ct.CTk):
         self.sidebar_button_4 = ct.CTkButton(self.sidebar_frame, text = "Hard Mode", command=self.hardMode)
         self.sidebar_button_4.grid(row=4, column=0, padx=20, pady=10)
 
+        self.build_intro()
+
     # Side Bar functions
     def intro(self):
-        self.count = 0
         self.delete(self.count)
+        self.count = 0
         self.build_intro()
         return
     def explination(self):
-        self.count = 1
         self.delete(self.count)
+        self.count = 1
         self.build_explination()
         return
     def questions(self):
-        self.count = 2
         self.delete(self.count)
+        self.count = 2
         self.build_questions()
         return
     def hardMode(self):
-        self.count = 3
         self.delete(self.count)
+        self.count = 3
         self.build_hardMode()
         return
     
 
     # Build functions
     def build_intro(self):
+        #Function that builds the main entry front page
+        self.textbox = ct.CTkTextbox(self, width=250, height = 350)
+        self.textbox.grid(row=0, column=1, padx=(20, 0), pady=(20, 0), sticky="nsew")
+
+        #Input for Text box
+        intro = open("Intro.txt", 'r')
+        self.textbox.insert("0.0",intro.read())
+        self.textbox.configure(state = tk.DISABLED)
         return
+    
     def build_explination(self):
+        self.textbox = ct.CTkTextbox(self, width=250, height = 350)
+        self.textbox.grid(row=0, column=1, padx=(20, 0), pady=(20, 0), sticky="nsew")
+        self.textbox.insert("0.0","Hello")
+        self.textbox.configure(state = tk.DISABLED)
+
+        self.btn_frame = ct.CTkFrame(self, width = 250, corner_radius=0)
+        self.btn_frame.grid(row = 3, column=1, padx=(20, 0), pady=(20, 0), sticky="nsew")
+
+        self.fwd = ct.CTkButton(master=self.btn_frame, text = "Next", command= qb.button_next)
+        self.btn_frame.grid(row = 0, column = 0, rowspan = 4, sticky = "nsew")
+        self.back = ct.CTkButton(master=self.btn_frame, text = "Next", command=qb.button_last)
+        self.btn_frame.grid(row = 1, column = 0, rowspan = 4, sticky = "nsew")
         return 
     def build_questions(self):
         return 
@@ -80,16 +104,35 @@ class Home(ct.CTk):
     #Delete Function
     def delete(self,count):
         if(count == 0):
+            self.del_intro()
             return
         elif(count == 1):
+            self.del_explination()
             return
         elif(count == 2):
+            self.del_questions()
             return
         elif(count == 3):
+            self.del_hardMode()
             return
+    
+    def del_intro(self):
+        self.textbox.configure(state = tk.NORMAL)
+        self.textbox.destroy()
+        return
+    def del_explination(self):
+        self.textbox.configure(state = tk.NORMAL)
+        self.textbox.destroy()
 
+        self.btn_frame.destroy()
+        return
+    def del_questions(self):
+        return
+    def del_hardMode(self):
+        return
 
 
 if __name__ == "__main__":
-    app = Home(0)
+    app = Home(0,0,0)
     app.mainloop()
+
