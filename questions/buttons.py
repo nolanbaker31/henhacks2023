@@ -9,17 +9,17 @@ import glob
 
 #variable declarations
 cur_file = 1 # for starting at file 1 (change to 0 if we start with 0)
-directory = os.path.dirname(os.path.abspath(__file__))
+questions_directory = os.path.dirname(os.path.abspath(__file__)) + '/questions'
 file_count = 0 # amount of txt files
 
 seen_questions = [] # contains the NUMBER of each question that has been seen
-file_count = len(glob.glob1(directory,"*.txt"))
+file_count = len(glob.glob1(questions_directory,"*.txt"))
 
 answer_map = {'A': 2, 'B': 6, 'C': 10, 'D': 14} # used to map answer to correct/incorrect in answer.txt files
 chosen_answer = 0
 score = 0 # used to keep track of score
 
-f = open(directory + '/question' + str(cur_file) + '.txt', 'r')
+f = open(questions_directory + '/question' + str(cur_file) + '.txt', 'r')
 file_contents = f.read()
 f.close()
 
@@ -37,7 +37,7 @@ def choose_random(): # Function for choosing a random, new question (no repeats)
 def button_next(): # Function for button to move to next text document
     global cur_file
     cur_file = choose_random()
-    f = open(directory + '/question' + str(cur_file) + '.txt', 'r')
+    f = open(questions_directory + '/question' + str(cur_file) + '.txt', 'r')
     file_contents = f.read()
     print(file_contents)
     #print(seen_questions)
@@ -47,14 +47,14 @@ def button_next(): # Function for button to move to next text document
 
 def get_answers(): # Function to receive answers to display, returns: A, answer, B, answer, etc...
     #print(cur_file)
-    f = open(directory + '/..' + '/answers/answer' + str(cur_file) + '.txt', 'r')
+    f = open(questions_directory + '/..' + '/answers/answer' + str(cur_file) + '.txt', 'r')
     file_contents = f.read()
     answers = file_contents.split(':')
     return answers[0], answers[1], answers[4], answers[5], answers[8], answers[9], answers[12], answers[13]
 
 def button_submit(chosen_answer): # Function for choosing the answer to a question, returns explanation for chosen answer
     print("You chose: " + chosen_answer)
-    f = open(directory + '/..' '/answers/answer' + str(cur_file) + '.txt', 'r')
+    f = open(questions_directory + '/..' '/answers/answer' + str(cur_file) + '.txt', 'r')
     file_contents = f.read()
     answers = file_contents.split(':')
     if answers[answer_map[chosen_answer]] == '1':
@@ -64,12 +64,13 @@ def button_submit(chosen_answer): # Function for choosing the answer to a questi
     return answers[answer_map[chosen_answer] + 1]
 
 def button_last(): # Function for button to move to last text document
-#TODO: change cur_file to read from seen_questions
     global cur_file
     if seen_questions.index(cur_file) == 0:
         return
     else:
-        f = open(directory + '/question' + str(seen_questions[seen_questions.index(cur_file)-1]) + '.txt', 'r')
+        cur_file = seen_questions.index(cur_file)-1
+        f = open(questions_directory + '/question' + str(seen_questions[cur_file]) + '.txt', 'r')
+        get_answers()
         file_contents = f.read()
         print(file_contents)
         f.close()
