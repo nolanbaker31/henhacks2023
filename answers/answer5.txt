@@ -1,0 +1,4 @@
+A: mv trampoline.c fun && mkdir fun : 0 : Incorrect, this would cause an error as you attempt to move to a nonexistent directory :
+B: mv trampoline.c fun; mkdir fun : 0 : Incorrect, this would cause an error as you attempt to move to a nonexistent directory :
+C: mkdir fun ; mv trampoline.c fun : pwd : 0 : Incorrect. While this would usually work, if there is an error it will still try to move the file :
+D: mkdir fun && mv trampoline.c fun : pwd : 1 : Correct. This would create the directory and then move the file to it. :
