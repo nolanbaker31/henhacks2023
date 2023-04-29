@@ -1,1 +1,7 @@
-Welcome to Linux!
+Welcome to our Linux Tutorial. The purpose of this guide is to show you around
+some Linux subsystem commands. These commands allow you to fully utilize the 
+potential of Linux!!
+
+At the bottom of your screen, there are next and previous buttons. Use these 
+to move through the guide. On the left, there is a quiz section, if you would
+like to try your luck. 
