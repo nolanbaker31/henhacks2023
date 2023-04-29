@@ -228,7 +228,7 @@ class Home(ct.CTk):
         if len(self.seen_questions) == count:
             return -1 # -1 means you have reached the end
         while True:
-            question_num = random.randint(2, count)
+            question_num = random.randint(1, count)
             if question_num not in self.seen_questions:
                 break
         self.seen_questions.append(question_num)
