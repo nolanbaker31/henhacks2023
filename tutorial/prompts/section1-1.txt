@@ -1,0 +1,32 @@
+Section 1: Navigation
+
+In the Linux OS, all data, processes, programs, etc. are stored as files within a directory tree.
+
+A few important notes about directory syntax:
+- to reference the current users home directory:
+	~/
+- to reference the current working direcory:
+	./
+- to reference the parent directory of current working directory:
+    ../
+
+A few important directory navigation commands:
+- To print the current working directory, use the 'pwd' command.
+- To list files in the current directory or specified path, use the 'ls' command.
+Make sure to read the man page for this command as there are many valuable options.
+One such flag is '-a', which tells ls to show all files, including
+hidden files (beginning with '.').
+	ls -a 			-- print all files within current directory
+	ls ~/           -- print all files within uers home directory
+	la -l           -- print file ownership information and metadata
+- To change directory, use the 'cd' command.
+	cd Documents    -- change to Documents directory within currnet working directory
+	cd ~/           -- change to home directory
+	cd -            -- change to previous working directory
+	cd ..           -- change to parent directory
+
+Another useful tool is aliasing. You can alias commands or file paths to make often used
+commands easier.
+	alias                -- list curently defined aliases
+	alias la='ls -lA'    -- la will now run 'ls -lA' in current directory
+	unalias la           -- removes alias for la
