@@ -1,1 +1,22 @@
-blah blah blah 2
+In the Linux CLI, commands are formatted vaguely as follows:
+	command [OPTION..] <parameter>
+Where command is the command to execute (from your PATH), flags are
+optional flags from the command's man page, and <parameter> is the
+argument passed to the command. Flags are usually denoted as such: '-a'
+
+To get help with command usage and see optional flags, check the man pages for the command:
+	man <command>
+For instance, to find more information on the list command and its options use:
+	man ls
+
+To search for a command by searching the command pages, use apropos:
+	apropos [option..] <keyword>
+For instance, to find commands dealing with file compression use:
+	apropos compress
+
+Some important commands to interact and send signals to the currently running process are as follows:
+- Ctrl+C : terminate running process by sending SIGINT
+- Ctrl+Z : send SIGSTP to halt current foreground process, resume with fg
+
+To run multiple seperate commands, seperate with ';'.
+To run a second command on success of the first, use '&&'
