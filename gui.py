@@ -2,7 +2,10 @@ import tkinter as tk
 import tkinter.messagebox
 import customtkinter as ct
 from PIL import Image    #Pillow
-import questions.buttons as qb 
+
+import os
+import random
+import time
 
 
 #System settings
@@ -26,7 +29,7 @@ class Home(ct.CTk):
         # configure grid layout (4x4)
         self.grid_columnconfigure(1, weight=1)
         self.grid_columnconfigure((2, 3), weight=0)
-        self.grid_rowconfigure((0, 1, 2,3), weight=1)
+        self.grid_rowconfigure((0, 1, 2), weight=1)
          
         #Side Bar for options
         self.sidebar_frame = ct.CTkFrame(self, width=250, corner_radius=0)
@@ -83,20 +86,53 @@ class Home(ct.CTk):
         return
     
     def build_explination(self):
-        self.textbox = ct.CTkTextbox(self, width=250, height = 350)
-        self.textbox.grid(row=0, column=1, padx=(20, 0), pady=(20, 0), sticky="nsew")
-        self.textbox.insert("0.0","Hello")
+        self.textbox = ct.CTkTextbox(self, width=600, height = 450, fg_color = "transparent")
+        self.textbox.grid(row=0, column=1, padx=(0, 0), pady=(20, 0), sticky="nsew")
+        self.textbox.insert("0.0","Hello") #Add to point towards intro
         self.textbox.configure(state = tk.DISABLED)
 
         self.btn_frame = ct.CTkFrame(self, width = 250, corner_radius=0)
-        self.btn_frame.grid(row = 3, column=1, padx=(20, 0), pady=(20, 0), sticky="nsew")
+        self.btn_frame.grid(row = 0, column = 4, rowspan = 4, sticky="nsew")
+        self.btn_frame.grid_columnconfigure(0,weight=1)
+        self.btn_frame.grid_rowconfigure(5,weight=1)
 
-        self.fwd = ct.CTkButton(master=self.btn_frame, text = "Next", command= qb.button_next)
-        self.btn_frame.grid(row = 0, column = 0, rowspan = 4, sticky = "nsew")
-        self.back = ct.CTkButton(master=self.btn_frame, text = "Next", command=qb.button_last)
-        self.btn_frame.grid(row = 1, column = 0, rowspan = 4, sticky = "nsew")
+        self.logo_label = ct.CTkLabel(self.btn_frame, text="Navigation", font=ct.CTkFont(size=20, weight="bold"))
+        self.logo_label.grid(row=0, column=0, padx=20, pady=(20, 10))
+
+        self.fwd = ct.CTkButton(master=self.btn_frame, text = "Next", command= self.e_fwd)
+        self.fwd.grid(row = 1, column = 0, rowspan = 1, sticky = "nsew", padx=20,pady=10)
+        self.back = ct.CTkButton(master=self.btn_frame, text = "Back", command=self.e_back)
+        self.back.grid(row = 2, column = 0, rowspan = 1, sticky = "nsew", padx=20,pady=10)
+
+
         return 
     def build_questions(self):
+        self.textbox = ct.CTkTextbox(self, width=600, height = 450)
+        self.textbox.grid(row=0, column=1, padx=(0, 0), pady=(20, 0), sticky="nsew")
+        self.textbox.insert("0.0","Question") #Add to point towards question 1
+        self.textbox.configure(state = tk.DISABLED)
+
+        self.btn_frame = ct.CTkFrame(self, width = 250, corner_radius=0)
+        self.btn_frame.grid(row = 0, column = 4, rowspan = 4, sticky="nsew")
+        self.btn_frame.grid_columnconfigure(0,weight=1)
+        self.btn_frame.grid_rowconfigure(7,weight=1)
+
+        self.logo_label = ct.CTkLabel(self.btn_frame, text="Options", font=ct.CTkFont(size=20, weight="bold"))
+        self.logo_label.grid(row=0, column=0, padx=20, pady=(20, 10))
+
+        self.ans1 = ct.CTkButton(master=self.btn_frame, text = "Answer 1", command= self.answer1)
+        self.ans1.grid(row = 1, column = 0, rowspan = 1, sticky = "nsew", padx=20,pady=10)
+        self.ans2 = ct.CTkButton(master=self.btn_frame, text = "Answer 2", command= self.answer2)
+        self.ans2.grid(row = 2, column = 0, rowspan = 1, sticky = "nsew", padx=20,pady=10)
+        self.ans3 = ct.CTkButton(master=self.btn_frame, text = "Answer 3", command= self.answer3)
+        self.ans3.grid(row = 3, column = 0, rowspan = 1, sticky = "nsew", padx=20,pady=10)
+        self.ans4 = ct.CTkButton(master=self.btn_frame, text = "Answer 4", command= self.answer4)
+        self.ans4.grid(row = 4, column = 0, rowspan = 1, sticky = "nsew", padx=20,pady=10)
+
+        self.fwd = ct.CTkButton(master=self.btn_frame, text = "Next", command= self.e_fwd)
+        self.fwd.grid(row = 5, column = 0, rowspan = 1, sticky = "nsew", padx=20,pady=10)
+        self.back = ct.CTkButton(master=self.btn_frame, text = "Back", command=self.e_back)
+        self.back.grid(row = 6, column = 0, rowspan = 1, sticky = "nsew", padx=20,pady=10)
         return 
     def build_hardMode(self):
         return 
@@ -127,12 +163,44 @@ class Home(ct.CTk):
         self.btn_frame.destroy()
         return
     def del_questions(self):
+        self.textbox.configure(state = tk.NORMAL)
+        self.textbox.destroy()
+
+        self.btn_frame.destroy()
         return
     def del_hardMode(self):
+        return
+    
+
+    #Mid Button Functions
+    #Need to add fuctions with parameters
+    def e_fwd(self):
+        self.tut_fwd()
+        return
+    def e_back(self):
+        self.tut_back()
+        return
+    
+    #Tutorial Functions
+
+    def tut_fwd(self):
+        return
+    def tut_back(self):
+        return
+    
+    #Question functions
+    def answer1(self):
+        return 
+    def answer2(self):
+        return
+    def answer3(self):
+        return
+    def answer4(self):
         return
 
 
 if __name__ == "__main__":
     app = Home(0,0,0)
     app.mainloop()
+
 
