@@ -1,6 +1,7 @@
 # -- intro.py -- 
 # File which loads all variables
 
+
 import os
 
 directory = os.path.dirname(os.path.abspath(__file__))
