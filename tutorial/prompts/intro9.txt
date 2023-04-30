@@ -1,4 +1,4 @@
-Section 8: Makefiles
+Section 7: Makefiles
 
 When building projects, the makefile is a useful tool.
 
