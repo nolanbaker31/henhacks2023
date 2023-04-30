@@ -1,0 +1,2 @@
+Section 4: Permissions & Users
+In Linux OS, the user interacts with the system with a user account. These accounts have different groups they belong to with different permissions. Files have metadata that determine who has what kind of access to the file
