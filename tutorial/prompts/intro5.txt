@@ -1,0 +1,14 @@
+Section 3: Piping and Stream Editing
+One of the most useful features in bash for scripts and commands is the many ways to link multiple commands together using different operators and commands.
+
+Here are some common ways to chain commands together:
+  cat file.txt | echo           -- the | represents pipe, sending output of first command to input of second
+  echo "new text" > file.txt    -- the > is a redirection, overwriting file.txt with output of the first command
+  echo "both text" >> file.txt  -- The >> is a redirection with noclobber, appending first command output to file.txt
+
+ Here are some useful commands for modifying text streams:
+   grep [options] Patterns <file>  -- grep searches for patterns in each <file>, prints corresponding lines. grep has many options and can use regular expressions for patterns. Read the man page for more info.
+   head <file>    -- print the top 10 lines of each file, use -n flag to set number of lines or -c to use bytes.
+   tail <file>    -- similar to head, but print last lines of the file.
+
+For more advanced options, read man pages for sed, a stream editor, and awk, a pattern scanning and processing language.

@@ -14,4 +14,6 @@ Some common commands are:
 Some commands to interract/read file data:
 	cat <file1...>       -- prints contents of file to CLI, can concatenate multiple files. See next section for more usage with this command
 	tac <file1...>       -- similar to cat, but prints file in reverse
-	find <src>
+	find <src> <xpr>     -- Find filename with <xpr> starting from <src> directory
+	diff <file> <file>   -- compare files line by line
+	tar                  -- archive utility, see man page for usage and options

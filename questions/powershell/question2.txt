@@ -1,1 +1,0 @@
-This is the second sample question. Something about ping -n flag.
