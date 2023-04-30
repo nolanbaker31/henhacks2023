@@ -1,0 +1,4 @@
+A: rmdir : 0 : Incorrect, this can only remove an empty directory :
+B: rm : 0 : Incorrect, this only removes 1 file. :
+C: rmdir -r : 0 : Incorrect. This would not work. :
+D: rm -r : 1 : Correct. This would remove the directory and everything else in it. :

@@ -1,0 +1,4 @@
+A: scp 192.168.1.68@bluehen : 0 : Incorrect, scp is for copying files to/from servers:
+B: ssh bluehen;192.168.1.68 . : 0 : Incorrect, @ is used after the username:
+C: ssh bluehen@192.168.1.68 : 1 : Correct! Im proud of you!:
+D: scp 192.168.1.68;bluehen : 0 : Incorrect, scp is for copying files to/from servers:

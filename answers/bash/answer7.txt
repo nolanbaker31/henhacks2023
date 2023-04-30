@@ -1,0 +1,4 @@
+A: vim : 0 : Incorrect, this would open VIM text editor :
+B: pico : 0 : Incorrect, this would open pico text editor :
+C: tac  : 1 : Correct! This would show the contents backward :
+D: emacs : 0 : Incorrect. This would open the emacs text editor :

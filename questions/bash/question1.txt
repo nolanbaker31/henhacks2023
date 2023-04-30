@@ -1,0 +1,2 @@
+What is the command to list all files in the current users Documents directory with
+metadata and permissions?

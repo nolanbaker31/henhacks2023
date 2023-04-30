@@ -1,0 +1,4 @@
+A: find "newark" : 0 : Incorrect, this would only search in the current directory. :
+B: find . -name "newark*" : 1 : Correct! This would find the file that starts with newark. :
+C: find . -name "newark"  : 0 : Incorrect, This would only find a file that is named "newark":
+D: find . -name "*newark" : 0 : Incorrect. This would only find a file ends with "newark" :

@@ -1,0 +1,4 @@
+A: mv cow.txt animals/chicken.txt : 1 : Correct! This will move & rename the file! :
+B: cp cow.txt chicken.txt animals : 0 : Incorrect, this will cause an error. :
+C: mv animals/chicken.txt cow.txt : pwd : 0 : Incorrect, this will attempt to move & rename chicken.txt to cow.txt. :
+D: mv chicken.txt cows.txt animals : pwd : 0 : Incorrect. This will cause an error. :

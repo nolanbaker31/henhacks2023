@@ -1,0 +1,4 @@
+A: touch hello.txt | pwd : 0 : Incorrect, the question did not ask for a 'txt' file specifically :
+B: touch hello : 1 : Correct, creates the file 'hello' with no information inside :
+C: hello touch ; pwd : 0 : Correct, hello is not a command :
+D: vim hello ; pwd : 0 : Incorrect. While you could save this as an empty file, this would require more than one command :

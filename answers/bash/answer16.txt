@@ -1,0 +1,4 @@
+A: scp 8.8.8.8;/home/usr/\*.c . : 1 : Correct, scp is tricky and only accepts \*:
+B: scp 8.8.8.8;/home/usr/*.c . : 0 : Incorrect, scp is tricky! You must use the escape character, \, to use *:
+C: cp 8.8.8.8;/home/usr/*.c . : 0 : Incorrect, must use scp to access server files!:
+D: cp 8.8.8.8;/home/usr/\*.c . : 0 : Incorrect, must use scp to access server files!:

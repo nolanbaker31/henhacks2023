@@ -1,0 +1,2 @@
+What sequence of commands switches to the previous working directory then prints the directory path?
+
