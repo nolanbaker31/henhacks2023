@@ -1,0 +1,7 @@
+Section 5: Networking
+The Linux CLI offers many ways to use networking capabilities.
+
+Some examples are:
+  ping [options] <address>   -- send packets to an IP address or website
+  ssh [options] dst          -- open an OpenSSH remote client to dst
+  scp user@src:path dst      -- copy files over ssh, from src to dst

@@ -1,2 +1,20 @@
 Section 4: Permissions & Users
-In Linux OS, the user interacts with the system with a user account. These accounts have different groups they belong to with different permissions. Files have metadata that determine who has what kind of access to the file
+In Linux OS, the user interacts with the system with a user account. These accounts have different groups they belong to with different permissions. Files have metadata that determine who has what kind of access to the file.
+
+This metadata can be represented as a string of characters:
+
+rwxrwxrw-      -- r-read, w-write, x-execute, in order of Owner:Group:Other
+
+or a three digit number:
+
+776            -- (4*r) + (2*w) + (1*x) for each Owner:Group:Other
+
+Owner is usually the creator of file or owner of the system. Group is the group owning the file. Others is for anyone not in these two groups.
+
+To see this metadata, remember the to check out the flags for the ls command.
+
+To modify this metadata, use the commands:
+  chmod <expr> <file> -- apply <expr> permissions (such as 774) to <file>
+  chmod +x <file>     -- useful to make file executable
+  chown [Owner][:[Group]] <file>   -- change file owner and group
+

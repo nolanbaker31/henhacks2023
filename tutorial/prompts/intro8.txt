@@ -1,0 +1,27 @@
+Section 6: Git Basics
+git is a project contect tracker incredibly useful for organizing work especially with a team.
+Project changes are tracked as commits and stored in a remote repository.
+Checkout https://github.com/ for a remote repository.
+
+Essential github workflow is:
+1. Start or clone a repo to your local disk
+2. Make changes, add features locally
+3. add these changes to be staged
+4. commit the staged changes, including a commit message to explain the changes
+5. push the commit to the remote repository
+6. As necessary, pull any changes from the remote repository
+
+Essential commands are:
+ git init          -- initialize a repository in current directory
+ git clone <url>   -- clone an existing repo into current directory
+ git add <files>   -- add modified files to stage for commit
+ git commit -m ""  -- create new commit with changes, tagged with message
+ git push          -- push commits to remote origin repo
+ git pull          -- pull new commits from remote repo that are not present locally
+
+To make it easier to develop new features without affecting the working code while in development, git allows the use of branches to keep code seperate.
+
+git checkout <branch> -- switch to existing branch
+git branch            -- show git branches
+git checkout -b <branch> -- create and switch to new branch
+
