@@ -1,0 +1,1 @@
+How would you output the first 5 lines of the file "henhacks" to a text doc "UD.txt"?

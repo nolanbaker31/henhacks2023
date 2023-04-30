@@ -1,0 +1,2 @@
+Some well documented python code has many commments throught, indicated by the #.
+Write a grep command to print every line that doesn't begin with # from the file doc.py

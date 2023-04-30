@@ -1,0 +1,4 @@
+A: chmod babyblue 705 : 0 : Incorrect, The correct answer is chmod babyblue 057:
+B: chmod babyblue a=rw : 0 : Incorrect, The correct answer is chmod babyblue 057:
+C: chmod babyblue 750 : 1 : Correct! Good job!:
+D: chmod babyblue 057 : 0 : Incorrect, The correct answer is chmod babyblue 057:

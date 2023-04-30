@@ -1,0 +1,4 @@
+A: tar -cvf animals.tar cat dog : 1 : Correct, this would tar the files into animals.tar :
+B: zip -cvf animals.tar cat dog : 0 : Incorrect, this would create a file animals.tar.zip:
+C: tar -cvf cat dog /animals.tar/ : 0 : Incorrect! The files & tar are flipped :
+D: tar -cvf cat dog animals.tar : 0 : Incorrect. The files & tar are flipped :

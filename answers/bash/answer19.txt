@@ -1,0 +1,4 @@
+A: grep -v '^#' doc.py : 1 : Correct:
+B: echo "#" >> doc.py : 0 : Incorrect, this would cause an error:
+C: sed -v '^#' doc.py : 0 : Incorrect:
+D: awk "#" >> doc.py : 0 : Incorrect:    

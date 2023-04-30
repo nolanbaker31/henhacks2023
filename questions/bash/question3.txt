@@ -1,0 +1,1 @@
+How would you create a file "hello" that is empty?

@@ -1,5 +1,5 @@
 # -- buttons.py -- 
-# File which loads all variables
+# File which loads all variables --> used for command line functionality rather than gui
 
 #libraries
 import os

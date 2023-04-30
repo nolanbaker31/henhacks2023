@@ -1,0 +1,4 @@
+A: ls -la : 0 : Incorrect, lists from current directory :
+B: ls -a ~/Documents : 0 : Incorrect, does not show metadata or permissions :
+C: ls -l Documents : 0 :  Incorrect, doesn't show hidden files, looks for Documents in current directory :
+D: ls -la ~/Documents : 1 : Correct, lists all files and metadata in user's Documents :

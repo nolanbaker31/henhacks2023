@@ -24,6 +24,10 @@ class Home(ct.CTk):
         self.curG = 1
         self.curP = 1
 
+        self.pgL = 0
+        self.pgG = 0
+        self.pgP = 0
+
         self.dirQ = os.path.dirname(os.path.abspath(__file__))+ '/questions'
         self.dirT = os.path.dirname(os.path.abspath(__file__)) + '/tutorial'
 
@@ -32,10 +36,10 @@ class Home(ct.CTk):
         self.seen_questionsP = []
 
         self.score = 0
-        self.ans1 = ""
-        self.ans2 = ""
-        self.ans3 = ""
-        self.ans4 = ""
+        self.ans1 = "A"
+        self.ans2 = "B"
+        self.ans3 = "C"
+        self.ans4 = "D"
         self.hint = ""
 
         self.qlen = len(glob.glob1(self.dirQ + '/bash',"*.txt"))
@@ -46,7 +50,7 @@ class Home(ct.CTk):
         #Making the GUI
 
         # configure window
-        self.title("Commander Quest")
+        self.title("Command Quest")
         self.geometry(f"{1100}x{580}")
 
         # configure grid layout (4x4)
@@ -70,7 +74,7 @@ class Home(ct.CTk):
         self.sidebar_button_3.grid(row=3, column=0, padx=20, pady=10)
         self.sidebar_button_4 = ct.CTkButton(self.sidebar_frame, text = "Git Questions", command=self.git)
         self.sidebar_button_4.grid(row=4, column=0, padx=20, pady=10)
-        self.sidebar_button_4 = ct.CTkButton(self.sidebar_frame, text = "Powershell Questions", command=self.powershell)
+        self.sidebar_button_4 = ct.CTkButton(self.sidebar_frame, text = "Make Questions", command=self.powershell)
         self.sidebar_button_4.grid(row=5, column=0, padx=20, pady=10)
 
         self.build_intro()
@@ -379,7 +383,7 @@ class Home(ct.CTk):
         if self.seen_questions.index(self.curQ) == 0:
             return
         else:
-            f = open(self.dirQ + '/question' + str(self.seen_questions[self.seen_questions.index(self.curQ)-1]) + '.txt', 'r')
+            f = open(self.dirQ + '/bash/question' + str(self.seen_questions[self.seen_questions.index(self.curQ)-1]) + '.txt', 'r')
             file_contents = f.read()
             f.close()
 
@@ -433,15 +437,16 @@ class Home(ct.CTk):
     def g_fwd(self):
         text, self.ans1, self.ans2, self.ans3, self.ans4 = self.buttonG_next()
         self.del_git()
-        self.build_questions()
+        self.build_git()
         self.textbox.configure(state = tk.NORMAL)
         self.textbox.insert("0.0",text)
         self.textbox.configure(state = tk.DISABLED)
         return
     def g_back(self):
         text, self.ans1, self.ans2, self.ans3, self.ans4 = self.buttonG_last()
+        print(self.buttonG_last())
         self.del_git()
-        self.build_questions()
+        self.build_git()
         self.textbox.configure(state = tk.NORMAL)
         self.textbox.insert("0.0",text)
         self.textbox.configure(state = tk.DISABLED)
@@ -537,7 +542,7 @@ class Home(ct.CTk):
     def p_fwd(self):
         text, self.ans1, self.ans2, self.ans3, self.ans4 = self.buttonP_next()
         self.del_power()
-        self.build_questions()
+        self.build_power()
         self.textbox.configure(state = tk.NORMAL)
         self.textbox.insert("0.0",text)
         self.textbox.configure(state = tk.DISABLED)
@@ -545,7 +550,7 @@ class Home(ct.CTk):
     def p_back(self):
         text, self.ans1, self.ans2, self.ans3, self.ans4 = self.buttonP_last()
         self.del_power()
-        self.build_questions()
+        self.build_power()
         self.textbox.configure(state = tk.NORMAL)
         self.textbox.insert("0.0",text)
         self.textbox.configure(state = tk.DISABLED)
@@ -564,11 +569,11 @@ class Home(ct.CTk):
 
     def buttonP_next(self): # Function for button to move to next text document
         self.curP = self.choose_randomL(self.plen)
-        f = open(self.dirQ + '/powershell/question' + str(self.curP) + '.txt', 'r')
+        f = open(self.dirQ + '/make/question' + str(self.curP) + '.txt', 'r')
         file_contents = f.read()
         f.close()
 
-        f = open(self.dirQ + '/..' + '/answers/powershell/answer' + str(self.curP) + '.txt', 'r')
+        f = open(self.dirQ + '/..' + '/answers/make/answer' + str(self.curP) + '.txt', 'r')
         file_content = f.read()
         answers = file_content.split(':')
         f.close()
@@ -576,7 +581,7 @@ class Home(ct.CTk):
     
     def buttonP_submit(self,chosen_answer): # Function for choosing the answer to a question, returns explanation for chosen answer
         answer_map = {'A': 2, 'B': 6, 'C': 10, 'D': 14}
-        f = open(self.dirQ + '/..' '/answers/powershell/answer' + str(self.curP) + '.txt', 'r')
+        f = open(self.dirQ + '/..' '/answers/make/answer' + str(self.curP) + '.txt', 'r')
         file_contents = f.read()
         answers = file_contents.split(':')
         if answers[answer_map[chosen_answer]] == '1':
@@ -588,11 +593,11 @@ class Home(ct.CTk):
         if self.seen_questionsG.index(self.curP) == 0:
             return
         else:
-            f = open(self.dirQ + 'powershell/question' + str(self.seen_questionsG[self.seen_questionsP.index(self.curP)-1]) + '.txt', 'r')
+            f = open(self.dirQ + 'make/question' + str(self.seen_questionsG[self.seen_questionsP.index(self.curP)-1]) + '.txt', 'r')
             file_contents = f.read()
             f.close()
 
-            f = open(self.dirQ + '/..' + '/answers/powershell/answer' + str(self.curP) + '.txt', 'r')
+            f = open(self.dirQ + '/..' + '/answers/make/answer' + str(self.curP) + '.txt', 'r')
             file_content = f.read()
             answers = file_content.split(':')
             f.close()

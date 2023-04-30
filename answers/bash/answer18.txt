@@ -1,0 +1,4 @@
+A: ctrl + d : 0 : Incorrect:
+B: ctrl + c : 1 : Correct!:
+C: ctrl + z : 0 : Incorrect:
+D: ctrl + s : 0 : Incorrect:

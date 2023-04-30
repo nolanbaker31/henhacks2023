@@ -1,0 +1,4 @@
+A: echo hello world || hi.c : 0 : Incorrect! || is a logical OR and will not pipe :
+B: echo "hello world!" >> hi.c : 0 : Incorrect! Quotes cannot be used in echo:
+C: echo "hello world!" || hi.c : 0 : Incorrect! Quotes cannot be used for echo, and || is a logical or ! :
+D: echo hello world! >> hi.c : 1 : Correct. This will output hello world to hi.c :

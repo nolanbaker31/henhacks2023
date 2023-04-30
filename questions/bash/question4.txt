@@ -1,0 +1,1 @@
+How would you rename the file "cow.txt" to "chicken.txt" and move it to the the subdirectory "animals"?

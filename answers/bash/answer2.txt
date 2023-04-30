@@ -1,0 +1,4 @@
+A: cd .. | pwd : 0 : Incorrect, changes to parent directory, not previous, then error at pipe :
+B: cd - | ls : 0 : Incorrect, uses pipe instead of semicolon to seperate commands, lists files :
+C: cd - ; pwd : 1 : Correct, changes to previous direcory and prints the directory path :
+D: cd .. ; pwd : 0 : Incorrect, changes to parent directory instead of previous :

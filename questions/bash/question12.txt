@@ -1,0 +1,1 @@
+What is the structure of file permissions in Linux?

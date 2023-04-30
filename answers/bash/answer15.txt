@@ -1,0 +1,4 @@
+A: ping -c 5 8.8.8.8 : 0 : Correct, this would contact 8.8.8.8 5 times:
+B: traceroute -c 5 8.8.8.8 : 1 : Incorrect, while traceroute will contact the server, it cannot be contacted multiple times':
+C: nslookup -c 5 8.8.8.8 : 0 : Incorrect, while nslookup contacts the server, -c cannot be used:
+D: whois -c 5 8.8.8.8 : 0 : Incorrect, 8.8.8.8 gives information about the server:
