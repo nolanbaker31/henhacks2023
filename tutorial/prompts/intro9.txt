@@ -1,0 +1,27 @@
+Section 8: Makefiles
+
+When building projects, the makefile is a useful tool.
+
+In a makefile, each unindented line represents a target followed by dependencies:
+
+targets: dependencies
+	recipe
+
+when the command "make target" is run in the parent directory of the makefile, it will use the makefiles recipe to build target.
+Here is an example recipe to compile a c program:
+
+main.o: main.c main.h
+	gcc main.c -o main.o
+
+Makefile targets can also be used to execute commands:
+
+clean:
+	rm -f *.o
+
+When "make clean" is run in the parent directory, it will use the makefile clean target and remove all files ending in .o
+
+Makefile targets can also call other to be built:
+
+all: main.o second.o
+
+When "make all" is executed, it will look for recipes for main.o and second.o and make these.
