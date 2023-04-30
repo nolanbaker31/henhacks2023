@@ -1,0 +1,4 @@
+A : "updated get methods" : 1 : Correct, specific git methods are vital to teamwork :
+B : "" : 0 : Incorrect, always add a commit message :
+C : "its broken" : Incorrect, should not push broken code :
+D : "entire program" : Incorrect, messages should be specific and commits should not be the entire code at once :

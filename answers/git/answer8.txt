@@ -1,0 +1,4 @@
+A : git checkout -b <newBranch> : 1 : Correct, creates and checkout <newBranch> :
+B : git checkout <newBranch> : 0 : Incorrect, does not create branch :
+C : git branch <newBranch> : 0 : Incorrect, only creates branch does not checkout :
+D : git branch -c <newBranch> : 0 : Incorrect, no such flag :

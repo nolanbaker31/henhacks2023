@@ -1,0 +1,4 @@
+A : git checkup : 0 : Incorrect, not a real command :
+B : git stat : 0 : Incorrect, not a command :
+C : git status : Correct, will show current status of repo :
+D : git log : Incorrect, used to inspect evolution of project files :
