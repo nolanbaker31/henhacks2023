@@ -1,1 +1,16 @@
-Someone add an intro to this 
+This is Command Quest, our solution to the pesky task of solving difficulties learning the various command line functions that you use in 
+an everyday situation as a coder. The program is setup in a way to make learning easy and convient. Each tab on the left has a different
+function to help you learn. Including Bash, Git, Make, and a tutorial section. Each include a back and forth functionality so you can go back 
+and forth at your convience.
+
+To start each page you must hit the "Next" button on each page, after that everything should update to the current tab your on! On top of that, 
+everything is able to be added onto. So if you need help with some sections we don't cover feel free to add your own. You jsut have to follow our
+formatting!
+
+Tutorial:
+    For this section we have a wide variety of questions that cover every function included in the question portions of the program. If you need
+    to leave to answer a question don't worry there is a save feature to keep track of what page you left off on! Just hit the next button to return
+
+Questions:
+    All of the question sections work the same. Hit the next button to start and from there just select an answer and move onto the next and your
+    leasiure 
