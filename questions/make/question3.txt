@@ -1,0 +1,1 @@
+How would you create a file that will delete out.o without warning?

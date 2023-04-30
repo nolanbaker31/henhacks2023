@@ -1,0 +1,1 @@
+How would you have a makefile that can recompile the file "test.c"? (; instead of :)

@@ -1,0 +1,5 @@
+A: make test.c : 0 : Incorrect, this would not do anything without properly creating the makefile :
+B: cc test.c test : 0 : Incorrect, this does not use the makefile. :
+C: test; test.c cc test.c: 1 :  Correct! This will properly recompile the file. :
+D: test; cc test.c : 0 : Incorrect, this would compile the first time but not recompile :
+ 
