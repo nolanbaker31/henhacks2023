@@ -1,0 +1,4 @@
+A: hello; echo "Hello World!" : 1 : Correct! When make is called, this will print hello world. :
+B: echo "Hello World!" : 0 : Incorrect, this does not use a makefile. :
+C: make; "Hello World!" : 0 :  Incorrect, this does not print anything and would cause an error :
+D: make >> "Hello World!" : 0 : Incorrect, this is attempting to pipe make into hello world. :

@@ -1,0 +1,5 @@
+A: make clean out.o : 0 : Incorrect, make clean must be defined first :
+B: clean; rm -f out.o : 1 : Correct! This will silence the warnings if it does not exist :
+C: clean; rm -r out.o : 0 :  Incorrect! This would be used for deleeting a directory & its contents:
+D: make clean -r out.o : 0 : Incorrect, make clean must be defined first :
+ 
