@@ -1,0 +1,1 @@
+When modifying git config variables, how do you make the changes affect all local repositories?

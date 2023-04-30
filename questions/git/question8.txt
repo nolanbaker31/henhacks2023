@@ -1,0 +1,1 @@
+This useful one-liner creates a branch and switches to it.

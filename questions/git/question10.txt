@@ -1,0 +1,1 @@
+This useful file holds names of files and directores for github to not track to prevent cluttering the remote repo with unnecessary local-files.

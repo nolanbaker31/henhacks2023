@@ -1,0 +1,2 @@
+Say there exists a repo http://github.com/Babbage/machine ,
+how would you make a copy of this repo into your current directory?
