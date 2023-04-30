@@ -1,0 +1,4 @@
+A : commit, push : Incorrect, nothing is staged for the commit :
+B : add, commit, push : Correct, stage changes, commit with a message, and push :
+C : commit, add, push : Incorrect, changes must be staged before commit :
+D : pull, commit, push : Incorrect, changes must be staged before commit :

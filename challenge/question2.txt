@@ -1,0 +1,10 @@
+A text file contains the ten numbered lines 1-10 among lines of random letters.
+Use grep to print lines beginning with 7, 8, and 9.
+
+
+
+
+
+
+
+grep '[7-9]'

@@ -1,0 +1,4 @@
+A : git start : 0 :  wrong command :
+B : git create : 0 : wrong command :
+C : init : 0 : requires git command first :
+D : git init : 1 : Correct, initializes a git repo in current directory :

@@ -1,0 +1,4 @@
+A : git branch --list : 1 : Correct, will list git branches :
+B : git branches : 0 : Incorrect, not a command :
+C : git branch : 1 : Correct, with no other arguments this will list branches :
+D : git list : 0 :  Incorrect, not a command :

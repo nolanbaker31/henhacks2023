@@ -1,0 +1,4 @@
+A : --persistent : 0 : Incorrect, not a flag :
+B : --remote : 0 : Incorrect, not a flag :
+C : --system : 0 : Incorrect, not a flag :
+D : --gloabl : 1 : Correct, will apply to all local repositories :

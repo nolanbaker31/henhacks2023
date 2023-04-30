@@ -1,0 +1,1 @@
+Another useful command, this shows you important information like current branch, current origin, current untracked files, current staged files, and commited files ready to push.

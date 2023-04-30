@@ -1,0 +1,4 @@
+A : git pull : 1 : Correct, this, if successful, will pull changes to your local repo :
+B : git add : 0 : Incorrect, this is used to stage local changes :
+C : git fetch : 0 : Incorrect, this will fetch the remote changes but will not apply them to your local repo yet :
+D : git checkout : 0 : Incorrect, this is used to checkout other branches :

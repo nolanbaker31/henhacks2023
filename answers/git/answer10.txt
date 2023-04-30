@@ -1,0 +1,4 @@
+A : gitexclude : 0 : Incorrect, will not be recognized :
+B : .gitexclude : 0 : Incorrect, will not be recognized :
+C : .gitignore : 1 : Correct, used to exclude files from tracking :
+D : .config : 0 : Incorrect, commonly named config file, not for git :
