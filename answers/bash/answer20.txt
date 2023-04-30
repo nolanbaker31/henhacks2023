@@ -1,0 +1,4 @@
+A: grep '[7&9] : 0 : Incorrect:
+B: grep '7,9' : 0 : Incorrect, this would cause an error:
+C: grep '[7-9]' : 1 : Correct!:
+D: grep '7&9' : 0 : Incorrect:    
