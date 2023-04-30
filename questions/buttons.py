@@ -28,7 +28,7 @@ def choose_random(): # Function for choosing a random, new question (no repeats)
     if len(seen_questions) == file_count:
         return -1 # -1 means you have reached the end
     while True:
-        question_num = random.randint(2, file_count)
+        question_num = random.randint(1, file_count)
         if question_num not in seen_questions:
             break
     seen_questions.append(question_num)

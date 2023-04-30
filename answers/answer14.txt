@@ -1,0 +1,4 @@
+A: chown file user : 0 : Incorrect, this would make the owner of user 'file':
+B: chown user file : 1 : Correct, this makes the owner of the file 'user':
+C: useradd user file : 0 : Incorrect! useradd is used to create a new user:
+D: useradd file user : 0 : Incorrect! useradd is used to create a new user:

@@ -1,0 +1,4 @@
+A: sed -n 5 >> henhacks.txt : 0 : Incorrect, sed is a stream editor is used to perform basic text transformations on an input stream :
+B: head -n 5 >> henhacks.txt : 1 : Correct, this would output the top 5 lines into henhacks.txt:
+C: grep -n 5 >> henhacks.txt : 0 : Incorrect! Grep searches for patterns in files :
+D: awk -n 5 >> henhacks.txt : 0 : Incorrect. Awk searches files for patterns :

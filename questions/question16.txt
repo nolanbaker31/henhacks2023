@@ -1,0 +1,1 @@
+How would you copy all files ending with .c from 8.8.8.8's /home/usr directory to your current directory? [use ; instead of :]
