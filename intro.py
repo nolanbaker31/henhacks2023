@@ -1,5 +1,5 @@
 # -- intro.py -- 
-# File which loads all variables
+# File which loads all variables --> used for Command line functionality instead of GUI
 import os
 
 tutorial_directory = os.path.dirname(os.path.abspath(__file__)) + '/tutorial'
