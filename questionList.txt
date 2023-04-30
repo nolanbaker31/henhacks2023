@@ -1,53 +1,52 @@
 
 -INTRO to CLI, command format, flags(options), parameter
 -man and apropos, sudo -k -g -h, history and clear
--Ctrl + C: terminate running cmd
+!-Ctrl + C: terminate running cmd
 - crtl+Z: send SIGSTP to current forground app
 - fg : bring paused app to foreground
 - Ctrl+S: freeze
 - Ctrl+Q: unfreeze
 - Ctrl+A: beginning of line
 - Ctrl+E: end of line
-- ; : seperate cmd
-- && : run if previous command successful
+!- ; : seperate cmd
+!- && : run if previous command successful
 
 Section 1: Navigation
-- ls, -a, -R, lh
-- cd, .., ~[username], -
-- pwd, -L, -P
+!- ls, -a, -R, lh
+!- cd, .., ~[username], -
+!- pwd, -L, -P
 - alias & unalias
 
 
 Section 2: File management
-- touch
-- mv, cp, -R
-- mkdir (-p, -m) , rmdir
-- vim/emacs/nano/pico
-- rm, -r, -f
-- cat, tac
+!- touch
+!- mv, cp, -R
+!- mkdir (-p, -m) , rmdir
+!- vim/emacs/nano/pico
+!- rm, -r, -f
+!- cat, tac
 - locate (-i) / updatedb
-- find
+!- find
 - diff
-- tar, zip, unzip
+!- tar, zip, unzip
 
 Section 3: Piping & Stream
-- echo (-n , -e, -E)
-- input | function
+!- echo (-n , -e, -E)
+!- input | function
 - input > output.txt
-- input >> output.txt
+!- input >> output.txt
 - grep (-i, -c, -l, -w, -r)
-- head -n, -c, -q
+!- head -n, -c, -q
 - sed (maybe?)
 - awk (maybe not include?)
 
 Section 4: permissions & users
-- explain file permissions in unix (-rwxrwxrwx = 777)
-- chmod (-c, -f, -v)
-- chown
-- useradd, userdel (/etc/passwd, /etc/shadow, /etc/group, /etc/gshadow)
+!- explain file permissions in unix (-rwxrwxrwx = 777)
+!- chmod (-c, -f, -v)
+!- chown
+!- useradd, userdel (/etc/passwd, /etc/shadow, /etc/group, /etc/gshadow)
 - passwd
 - su
--
 
 Section 5: System & Processes
 - ps (-T, -u, -A), ps ux
@@ -57,10 +56,10 @@ Section 5: System & Processes
 
 
 Section 6: Networking
-- ping (-c)
+!- ping (-c)
 - wget, curl
 - hostname (-a, -A, -i)
-- ssh, scp
+!- ssh, scp
 - ifconfig
 - traceroute
 - netstat
